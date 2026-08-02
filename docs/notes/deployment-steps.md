@@ -1,34 +1,61 @@
-# Azure Secure Web Server V1 Deployment
+# Azure Enterprise Infrastructure - Version 1 Deployment
 
-## Update Ubuntu
+## Objective
 
-```bash
-sudo apt update
-sudo apt upgrade -y
-```
+Deploy a secure Linux web server on Microsoft Azure and host a personal portfolio website.
 
-## Install Nginx
+---
 
-```bash
-sudo apt install nginx -y
-```
+## Resources Created
 
-## Enable Nginx
+- Resource Group
+- Virtual Network (VNet)
+- Subnet
+- Network Security Group (NSG)
+- Public IP Address
+- Ubuntu 24.04 LTS Virtual Machine
 
-```bash
-sudo systemctl enable nginx
-sudo systemctl start nginx
-```
+---
 
-## Upload Website
+## VM Configuration
 
-scp ...
+- Operating System: Ubuntu Server 24.04 LTS
+- Authentication: SSH Key Pair
+- Size: Standard B1s
 
-## Replace Default Page
+---
 
-sudo cp ~/index.html /var/www/html/index.html
+## Network Configuration
 
-## Reload Nginx
+Allowed inbound ports:
 
-sudo systemctl reload nginx
-```
+- SSH (22)
+- HTTP (80)
+
+---
+
+## Web Server
+
+Installed Nginx and configured it to start automatically.
+
+Verified installation by accessing:
+
+http://<Public-IP>
+
+---
+
+## Website Deployment
+
+Uploaded a single-file HTML portfolio website.
+
+Copied the website to:
+
+/var/www/html/index.html
+
+Verified deployment using the VM public IP.
+
+---
+
+## Status
+
+✅ Version 1 completed successfully.
