@@ -1,175 +1,145 @@
-# Azure Enterprise Infrastructure ☁️🏗️
+# Azure Enterprise Infrastructure ☁️
 
-> An enterprise-style Microsoft Azure infrastructure project built progressively while completing Azure and Security certifications.
+A hands-on cloud engineering project where I design, build, secure, and improve an enterprise-style Microsoft Azure environment while progressing through Microsoft Azure and AWS certifications.
 
----
-
-## Project Overview
-
-This repository documents my flagship Microsoft Azure cloud engineering project.
-
-Rather than creating multiple disconnected projects, this repository evolves into a production-inspired Azure environment that demonstrates cloud infrastructure, networking, security, monitoring, identity, and enterprise architecture.
-
-Each new certification expands the project with real-world Azure services and best practices.
+Instead of creating many isolated projects, this repository evolves through multiple versions, gradually becoming a production-inspired cloud infrastructure.
 
 ---
 
-# Project Objectives
+# 🎯 Project Goal
 
-* Build enterprise-style Azure infrastructure
-* Develop practical cloud engineering skills
-* Learn Azure networking and security
-* Deploy and manage Linux workloads
-* Apply cloud security best practices
-* Document every stage of deployment
-* Continuously improve the same infrastructure through multiple versions
+Build a complete Azure enterprise infrastructure by implementing real-world cloud architecture, security, administration, monitoring, automation, and high availability.
+
+Each major version aligns with a Microsoft certification and demonstrates practical implementation of the concepts learned.
 
 ---
 
-# Version Roadmap
+# 🛣️ Project Roadmap
 
-## ✅ Version 1 - Core Infrastructure *(Completed)*
+## ✅ Version 1 – Azure Infrastructure Foundation *(Completed)*
 
-### Infrastructure
+Implemented:
 
-* Azure Resource Group
-* Virtual Network (VNet)
-* Subnet
-* Public IP
-* Network Security Group
-
-### Compute
-
-* Ubuntu Server 24.04 LTS
-* Azure Virtual Machine
-
-### Connectivity
-
-* SSH Authentication
-* HTTP (Port 80)
-
-### Web Hosting
-
-* Nginx
-* Portfolio Website Deployment
+- Resource Group
+- Virtual Network (VNet)
+- Subnet
+- Network Security Group (NSG)
+- Public IP Address
+- Ubuntu 24.04 LTS Virtual Machine
+- SSH Key Authentication
+- Nginx Web Server
+- Static Portfolio Website Deployment
 
 ---
 
-## 🔒 Version 2 - Identity & Access Management
+## 🔐 Version 2 – Identity & Access Management *(SC-900)*
 
-**After Microsoft SC-900**
+Planned:
 
-Planned additions:
-
-* Microsoft Entra ID
-* Role-Based Access Control (RBAC)
-* Least Privilege Access
-* Identity Management
-* Security Documentation
+- Microsoft Entra ID
+- Role-Based Access Control (RBAC)
+- Identity Management
+- Least Privilege Access
+- Identity Security Concepts
 
 ---
 
-## 🛡️ Version 3 - Cloud Security
+## 🛡️ Version 3 – Cloud Security *(SC-500)*
 
-**After Microsoft SC-500**
+Planned:
 
-Planned additions:
-
-* Microsoft Defender for Cloud
-* Security Hardening
-* Security Recommendations
-* Identity Protection
-* Cloud Security Best Practices
-
----
-
-## ⚙️ Version 4 - Azure Administration
-
-**After Microsoft AZ-104**
-
-Planned additions:
-
-* Azure Monitor
-* Log Analytics
-* Azure Backup
-* Recovery Services Vault
-* Azure Bastion
-* Storage Management
-* Virtual Machine Administration
+- Microsoft Defender for Cloud
+- Security Hardening
+- Security Recommendations
+- Microsoft Defender Features
+- Identity Protection
+- Secure Configuration
 
 ---
 
-## 🏗️ Version 5 - Enterprise Architecture
+## ⚙️ Version 4 – Azure Administration *(AZ-104)*
 
-**After Microsoft AZ-305**
+Planned:
 
-Planned additions:
-
-* High Availability
-* Load Balancer
-* Availability Zones
-* Cost Optimization
-* Enterprise Network Design
-* Architecture Documentation
-
----
-
-# Current Architecture
-
-> Architecture diagrams for every version are available in:
-
-```
-docs/architecture/
-```
+- Azure Monitor
+- Log Analytics
+- Azure Backup
+- Recovery Services Vault
+- Azure Bastion
+- Storage Accounts
+- Virtual Machine Management
+- Networking Administration
 
 ---
 
-# Technologies
+## 🏗️ Version 5 – Enterprise Architecture *(AZ-305)*
 
-### Microsoft Azure
+Planned:
 
-* Azure Resource Groups
-* Azure Virtual Machines
-* Azure Virtual Network
-* Azure Network Security Groups
-* Public IP Address
-
-### Operating System
-
-* Ubuntu Server 24.04 LTS
-
-### Networking
-
-* TCP/IP
-* HTTP
-* SSH
-
-### Web Server
-
-* Nginx
-
-### Tools
-
-* Git
-* GitHub
-* Visual Studio Code
-* OpenSSH
+- High Availability
+- Availability Zones
+- Load Balancer
+- Application Gateway
+- Cost Optimization
+- Scalable Architecture
+- Disaster Recovery Design
 
 ---
 
-# Repository Structure
+## ☁️ Version 6 – AWS Integration
 
-```
+Planned:
+
+- AWS Solutions Architecture
+- Hybrid Cloud Concepts
+- Cross-Cloud Best Practices
+- Enterprise Architecture Comparison
+
+---
+
+# 🛠️ Technologies Used
+
+## Cloud
+
+- Microsoft Azure
+- Azure Virtual Machines
+- Azure Virtual Network
+- Network Security Groups
+
+## Operating System
+
+- Ubuntu Server 24.04 LTS
+
+## Web Server
+
+- Nginx
+
+## Networking
+
+- SSH
+- TCP/IP
+- HTTP
+
+## Development
+
+- HTML
+- Git
+- GitHub
+
+---
+
+# 📂 Repository Structure
+
+```text
 azure-enterprise-infrastructure/
-
 │
+├── Portfolio/
 ├── docs/
 │   ├── architecture/
-│   ├── deployment/
 │   ├── notes/
 │   └── screenshots/
 │
-├── portfolio/
+├── scripts/
 │
 ├── README.md
 ├── LICENSE
@@ -178,94 +148,91 @@ azure-enterprise-infrastructure/
 
 ---
 
-# Documentation
+# 📖 Documentation
 
-Every version includes:
+The `docs/` directory contains:
 
-* Architecture diagrams
-* Deployment steps
-* Azure configurations
-* Linux commands
-* Screenshots
-* Problems encountered
-* Solutions
-* Lessons learned
+- Architecture diagrams
+- Deployment documentation
+- Linux commands
+- Troubleshooting notes
+- Lessons learned
+- Deployment screenshots
 
 ---
 
-# Current Status
+# 📸 Project Gallery
 
-| Version   | Status      |
-| --------- | ----------- |
+Deployment screenshots are available inside:
+
+```text
+docs/screenshots/
+```
+
+Architecture diagrams are available inside:
+
+```text
+docs/architecture/
+```
+
+---
+
+# 📚 Skills Demonstrated
+
+- Azure Infrastructure Deployment
+- Linux Administration
+- Cloud Networking
+- Network Security
+- SSH Authentication
+- Nginx Web Server Configuration
+- Static Website Hosting
+- Cloud Troubleshooting
+- Git & GitHub Workflow
+
+---
+
+# 🚀 Future Improvements
+
+- HTTPS with SSL/TLS
+- Custom Domain
+- Azure Monitor
+- Azure Backup
+- Microsoft Entra ID
+- Azure Bastion
+- Azure Load Balancer
+- Application Gateway
+- Azure Key Vault
+- Azure Firewall
+- Azure Policy
+- High Availability
+- Disaster Recovery
+- Infrastructure Automation
+
+---
+
+# 📈 Current Status
+
+| Version | Status |
+|---------|--------|
 | Version 1 | ✅ Completed |
-| Version 2 | ⏳ Planned   |
-| Version 3 | ⏳ Planned   |
-| Version 4 | ⏳ Planned   |
-| Version 5 | ⏳ Planned   |
+| Version 2 | ⏳ Planned |
+| Version 3 | ⏳ Planned |
+| Version 4 | ⏳ Planned |
+| Version 5 | ⏳ Planned |
+| Version 6 | ⏳ Planned |
 
 ---
 
-# Skills Demonstrated
-
-## Cloud
-
-* Azure Infrastructure
-* Virtual Machines
-* Networking
-
-## Linux
-
-* Linux Administration
-* SSH
-* Package Management
-
-## Networking
-
-* Virtual Networks
-* Network Security Groups
-* Public IP Configuration
-
-## Web Hosting
-
-* Nginx
-* Static Website Deployment
-
-## Security
-
-* Secure SSH Authentication
-* NSG Configuration
-* Infrastructure Hardening
-
-## Troubleshooting
-
-* Azure Networking
-* SSH Connectivity
-* Nginx Configuration
-* Linux Administration
-
----
-
-# Future Improvements
-
-* HTTPS with SSL/TLS
-* Custom Domain
-* Azure DNS
-* Monitoring
-* Backup
-* Microsoft Entra ID
-* Azure Bastion
-* High Availability
-* Load Balancer
-* Production Architecture
-* Infrastructure Automation
-
----
-
-## Author
+# 👨‍💻 Author
 
 **Faizan Khan Khaleel**
 
-BCA - Cloud Architecture & Cybersecurity
+BCA – Cloud Architecture & Cybersecurity
 
-Building enterprise-grade cloud infrastructure while progressing through Microsoft Azure and AWS certifications.
+Building enterprise cloud infrastructure through hands-on Microsoft Azure and AWS projects.
 
+---
+
+## ⭐ Repository Purpose
+
+This repository documents my journey from cloud fundamentals to enterprise cloud architecture by building and improving a single real-world project over multiple versions instead of creating many disconnected projects.
