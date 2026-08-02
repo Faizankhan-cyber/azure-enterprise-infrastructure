@@ -1,187 +1,271 @@
-# Azure Secure Web Server 🚀
+# Azure Enterprise Infrastructure ☁️🏗️
 
-A hands-on Microsoft Azure cloud project where I build, secure, and improve an enterprise-style web infrastructure while progressing through Microsoft Azure and Security certifications.
-
-This repository documents my complete learning journey, from deploying a basic Linux web server to designing a production-ready Azure environment.
+> An enterprise-style Microsoft Azure infrastructure project built progressively while completing Azure and Security certifications.
 
 ---
 
-## 📌 Project Goal
+## Project Overview
 
-Build a real-world Azure infrastructure by gradually adding new features after completing each certification.
+This repository documents my flagship Microsoft Azure cloud engineering project.
 
-Instead of creating multiple small projects, this repository evolves through multiple versions and demonstrates practical Azure administration, cloud security, networking, monitoring, and architecture.
+Rather than creating multiple disconnected projects, this repository evolves into a production-inspired Azure environment that demonstrates cloud infrastructure, networking, security, monitoring, identity, and enterprise architecture.
 
----
-
-# 🛣️ Project Roadmap
-
-## ✅ Version 1 – Secure Linux Web Server (In Progress)
-
-- Azure Resource Group
-- Virtual Network (VNet)
-- Subnet
-- Network Security Group (NSG)
-- Ubuntu Virtual Machine
-- SSH Access
-- Nginx Web Server
-- Portfolio Website Deployment
+Each new certification expands the project with real-world Azure services and best practices.
 
 ---
 
-## 🔒 Version 2 – Identity & Cloud Security
+# Project Objectives
 
-After completing **Microsoft SC-900**
+* Build enterprise-style Azure infrastructure
+* Develop practical cloud engineering skills
+* Learn Azure networking and security
+* Deploy and manage Linux workloads
+* Apply cloud security best practices
+* Document every stage of deployment
+* Continuously improve the same infrastructure through multiple versions
+
+---
+
+# Version Roadmap
+
+## ✅ Version 1 - Core Infrastructure *(Completed)*
+
+### Infrastructure
+
+* Azure Resource Group
+* Virtual Network (VNet)
+* Subnet
+* Public IP
+* Network Security Group
+
+### Compute
+
+* Ubuntu Server 24.04 LTS
+* Azure Virtual Machine
+
+### Connectivity
+
+* SSH Authentication
+* HTTP (Port 80)
+
+### Web Hosting
+
+* Nginx
+* Portfolio Website Deployment
+
+---
+
+## 🔒 Version 2 - Identity & Access Management
+
+**After Microsoft SC-900**
 
 Planned additions:
 
-- Microsoft Entra ID
-- Role-Based Access Control (RBAC)
-- Identity Management
-- Least Privilege Access
-- Security Best Practices
+* Microsoft Entra ID
+* Role-Based Access Control (RBAC)
+* Least Privilege Access
+* Identity Management
+* Security Documentation
 
 ---
 
-## 🛡️ Version 3 – Azure Security Hardening
+## 🛡️ Version 3 - Cloud Security
 
-After completing **Microsoft SC-500**
+**After Microsoft SC-500**
 
 Planned additions:
 
-- Microsoft Defender for Cloud
-- Security Recommendations
-- NSG Hardening
-- Identity Protection
-- Cloud Security Configuration
+* Microsoft Defender for Cloud
+* Security Hardening
+* Security Recommendations
+* Identity Protection
+* Cloud Security Best Practices
 
 ---
 
-## ⚙️ Version 4 – Azure Administration
+## ⚙️ Version 4 - Azure Administration
 
-After completing **Microsoft AZ-104**
+**After Microsoft AZ-104**
 
 Planned additions:
 
-- Azure Backup
-- Recovery Services Vault
-- Azure Monitor
-- Log Analytics
-- Azure Bastion
-- Storage Management
+* Azure Monitor
+* Log Analytics
+* Azure Backup
+* Recovery Services Vault
+* Azure Bastion
+* Storage Management
+* Virtual Machine Administration
 
 ---
 
-## 🏗️ Version 5 – Azure Enterprise Architecture
+## 🏗️ Version 5 - Enterprise Architecture
 
-After completing **Microsoft AZ-305**
+**After Microsoft AZ-305**
 
 Planned additions:
 
-- High Availability
-- Load Balancer
-- Availability Zones
-- Scalable Architecture
-- Cost Optimization
-- Enterprise Design Documentation
+* High Availability
+* Load Balancer
+* Availability Zones
+* Cost Optimization
+* Enterprise Network Design
+* Architecture Documentation
 
 ---
 
-# 🛠️ Technologies Used
+# Current Architecture
 
-- Microsoft Azure
-- Ubuntu Server 24.04 LTS
-- Linux
-- SSH
-- Nginx
-- Azure Virtual Machines
-- Azure Virtual Network
-- Network Security Groups
-
----
-
-# 📂 Repository Structure
+> Architecture diagrams for every version are available in:
 
 ```
-azure-secure-web-server
+docs/architecture/
+```
+
+---
+
+# Technologies
+
+### Microsoft Azure
+
+* Azure Resource Groups
+* Azure Virtual Machines
+* Azure Virtual Network
+* Azure Network Security Groups
+* Public IP Address
+
+### Operating System
+
+* Ubuntu Server 24.04 LTS
+
+### Networking
+
+* TCP/IP
+* HTTP
+* SSH
+
+### Web Server
+
+* Nginx
+
+### Tools
+
+* Git
+* GitHub
+* Visual Studio Code
+* OpenSSH
+
+---
+
+# Repository Structure
+
+```
+azure-enterprise-infrastructure/
+
 │
 ├── docs/
-├── screenshots/
-├── website/
+│   ├── architecture/
+│   ├── deployment/
+│   ├── notes/
+│   └── screenshots/
+│
+├── portfolio/
+│
 ├── README.md
-└── LICENSE
+├── LICENSE
+└── .gitignore
 ```
 
 ---
 
-# 📖 Documentation
+# Documentation
 
-Project documentation can be found inside the **docs/** folder.
+Every version includes:
 
-Each milestone is documented with:
-
-- Configuration steps
-- Commands used
-- Problems faced
-- Solutions
-- Screenshots
-- Lessons learned
-
----
-
-# 📸 Screenshots
-
-Screenshots of each stage of the project are available in the **screenshots/** folder.
+* Architecture diagrams
+* Deployment steps
+* Azure configurations
+* Linux commands
+* Screenshots
+* Problems encountered
+* Solutions
+* Lessons learned
 
 ---
 
-# 🎯 Current Status
+# Current Status
 
-**Version 1:** 🟡 In Progress
-
-Current progress:
-
-- ✅ Azure Infrastructure
-- ✅ Linux VM
-- ✅ SSH Access
-- ✅ Nginx Installation
-- 🔄 Portfolio Website Deployment
-- ⏳ Documentation
+| Version   | Status      |
+| --------- | ----------- |
+| Version 1 | ✅ Completed |
+| Version 2 | ⏳ Planned   |
+| Version 3 | ⏳ Planned   |
+| Version 4 | ⏳ Planned   |
+| Version 5 | ⏳ Planned   |
 
 ---
 
-# 📚 Skills Demonstrated
+# Skills Demonstrated
 
-- Azure Infrastructure
-- Cloud Networking
-- Linux Administration
-- Virtual Machines
-- SSH
-- Nginx
-- Cloud Security
-- Infrastructure Deployment
-- Troubleshooting
+## Cloud
+
+* Azure Infrastructure
+* Virtual Machines
+* Networking
+
+## Linux
+
+* Linux Administration
+* SSH
+* Package Management
+
+## Networking
+
+* Virtual Networks
+* Network Security Groups
+* Public IP Configuration
+
+## Web Hosting
+
+* Nginx
+* Static Website Deployment
+
+## Security
+
+* Secure SSH Authentication
+* NSG Configuration
+* Infrastructure Hardening
+
+## Troubleshooting
+
+* Azure Networking
+* SSH Connectivity
+* Nginx Configuration
+* Linux Administration
 
 ---
 
-# 🚀 Future Improvements
+# Future Improvements
 
-- HTTPS with SSL/TLS
-- Custom Domain
-- Azure Monitor
-- Azure Backup
-- Microsoft Entra ID Integration
-- Azure Bastion
-- Load Balancer
-- High Availability
-- Enterprise Security
+* HTTPS with SSL/TLS
+* Custom Domain
+* Azure DNS
+* Monitoring
+* Backup
+* Microsoft Entra ID
+* Azure Bastion
+* High Availability
+* Load Balancer
+* Production Architecture
+* Infrastructure Automation
 
 ---
 
-## 👨‍💻 Author
+## Author
 
 **Faizan Khan Khaleel**
 
-BCA (Cloud Architecture & Cybersecurity)
+BCA - Cloud Architecture & Cybersecurity
 
-Building practical cloud security projects while learning Microsoft Azure and AWS.
+Building enterprise-grade cloud infrastructure while progressing through Microsoft Azure and AWS certifications.
+

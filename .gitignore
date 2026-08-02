@@ -1,0 +1,21 @@
+# OS Files
+.DS_Store
+Thumbs.db
+
+# VS Code
+.vscode/
+
+# Temporary files
+*.tmp
+*.log
+
+# SSH Keys
+*.pem
+*.ppk
+id_rsa
+id_ed25519
+
+# Terraform (Future)
+.terraform/
+*.tfstate
+*.tfstate.*
