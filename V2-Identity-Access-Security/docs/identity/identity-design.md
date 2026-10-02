@@ -27,7 +27,7 @@ Users are organized into groups based on their responsibilities. Azure RBAC is t
                            v
                     Azure Resources
 ```
-3. User Groups
+## 3. User Groups
 
 The project will use three primary security groups:
 
@@ -58,7 +58,8 @@ Expected access:
 Manage Azure infrastructure
 Perform administrative operations required by their responsibilities
 Access will still be assigned according to the required scope
-4. Identity-to-Access Model
+
+## 4. Identity-to-Access Model
 
 The project follows this model:
 ```
@@ -79,7 +80,7 @@ Resource Scope
 Permissions will be assigned to groups wherever practical rather than directly to individual users.
 
 
-5. Least Privilege
+## 5. Least Privilege
 
 The project will avoid granting excessive permissions.
 
@@ -93,7 +94,8 @@ A defined user group
 A defined role
 A defined resource scope
 A documented reason
-6. Security Objectives
+
+## 6. Security Objectives
 
 The identity design aims to:
 
@@ -106,7 +108,8 @@ Minimize direct user-to-resource role assignments.
 Test that authorized operations succeed.
 Test that unauthorized operations are denied.
 Document all access decisions.
-7. Scope
+
+## 7. Scope
 
 The identity design covers:
 
