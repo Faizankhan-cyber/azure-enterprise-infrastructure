@@ -28,24 +28,28 @@ The primary RBAC scope will therefore be the V2 resource group unless a narrower
 
 ## 3. Planned Permission Matrix
 
-Entra ID Group	                  RBAC     Role	    Scope	                                Purpose
-Cloud-Developers	                To be finalized	  V2 Resource Group / Resource	        Development operations
-Security-Team	                    To be finalized	  V2 Resource Group / Resource	        Security inspection and validation
-Cloud-Administrators	            To be finalized	  V2 Resource Group	                    Infrastructure administration
+| Entra ID Group       | RBAC Role                            | Scope             | Purpose                                                        |
+| -------------------- | ------------------------------------ | ----------------- | -------------------------------------------------------------- |
+| Cloud-Developers     | Virtual Machine Contributor + Reader | V2 Resource Group | Manage the project VM and inspect related Azure resources      |
+| Security-Team        | Security Reader                      | V2 Resource Group | Review security configuration and security-related information |
+| Cloud-Administrators | Contributor                          | V2 Resource Group | Manage the V2 Azure infrastructure                             |
+
 
 The exact built-in Azure RBAC roles will be selected and justified before implementation.
 
 ## 4. Access Requirements
-Cloud-Developers
+
+#### Cloud-Developers
 
 Required capabilities:
 
 Work with resources required for development
 Inspect relevant resource configuration
-Perform necessary development operations
+Perform necessary VM management operations
 No unnecessary identity-management privileges
 No unnecessary subscription-level administrative access
-Security-Team
+
+#### Security-Team
 
 Required capabilities:
 
@@ -54,7 +58,8 @@ Review security configuration
 Validate network and infrastructure security
 Perform security-related checks
 No unnecessary infrastructure-management privileges
-Cloud-Administrators
+
+#### Cloud-Administrators
 
 Required capabilities:
 
@@ -63,15 +68,14 @@ Create and modify required Azure resources
 Troubleshoot infrastructure
 Perform administrative operations required by the project
 
-
 ## 5. Privilege Boundaries
 
 The following boundaries will be maintained:
-
-Group	Should NOT automatically receive
-Cloud-Developers	Tenant-wide administrative access
-Security-Team	Broad infrastructure modification access
-Cloud-Administrators	Unnecessary tenant-wide identity privileges
+| Group                | Should NOT automatically receive            |
+| -------------------- | ------------------------------------------- |
+| Cloud-Developers     | Tenant-wide administrative access           |
+| Security-Team        | Broad infrastructure modification access    |
+| Cloud-Administrators | Unnecessary tenant-wide identity privileges |
 
 
 ## 6. Assignment Principles
@@ -87,23 +91,64 @@ Document the reason for each role assignment.
 Validate both allowed and denied operations.
 
 
-## 7. Implementation Status
+## 7. Final Role Selection
 
-Current status:
+#### Cloud-Developers
 
- Identity groups defined
- RBAC responsibilities defined
- Resource scope identified
- Exact RBAC roles selected
+Roles:
+
+Virtual Machine Contributor
+Reader
+
+Scope:
+
+V2 Resource Group
+
+The Virtual Machine Contributor role provides VM management capabilities without granting Azure RBAC role-assignment permissions. Reader provides read-only visibility into the remaining resources required for development and troubleshooting.
+
+#### Security-Team
+
+Role:
+
+Security Reader
+
+Scope:
+
+V2 Resource Group
+
+Security Reader provides security-focused visibility without granting general infrastructure management permissions.
+
+#### Cloud-Administrators
+
+Role:
+
+Contributor
+
+Scope:
+
+V2 Resource Group
+
+Contributor provides the infrastructure-management capabilities required for the project without automatically granting Azure RBAC role-assignment permissions.
+
+
+## 8. Privileged Role Decision
+
+The following roles are intentionally not assigned to the project groups:
+
+Owner
+User Access Administrator
+Role Based Access Control Administrator
+
+These roles are excluded because the project does not require the groups to manage Azure RBAC assignments themselves.
+
+
+## 9. Implementation Status
+
+ Identity groups defined - Completed
+ RBAC responsibilities defined - Completed
+ Resource scope identified - Completed
+ Exact RBAC roles selected - Completed
+ Role-selection rationale documented - Completed
  RBAC assignments implemented
  Access tested
  Evidence captured
-
-### Important
-```
-Notice that I left **"To be finalized"** instead of inventing roles now.
-
-That's intentional. We should select the actual Azure built-in roles based on the operations we want each group to perform, then document why each role was chosen.
-
-Once this file is saved, **the identity design phase is complete**. The next step will be selecting the actual RBAC roles and then moving into the architecture design.
-```
