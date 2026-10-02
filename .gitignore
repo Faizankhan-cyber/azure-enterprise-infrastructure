@@ -15,7 +15,12 @@ Thumbs.db
 id_rsa
 id_ed25519
 
-# Terraform (Future)
+# Terraform
 .terraform/
 *.tfstate
 *.tfstate.*
+crash.log
+crash.*.log
+terraform.tfvars
+*.tfvars
+!terraform.tfvars.example
