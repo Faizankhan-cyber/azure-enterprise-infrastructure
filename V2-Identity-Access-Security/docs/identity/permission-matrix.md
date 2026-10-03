@@ -144,17 +144,7 @@ These roles are excluded because the project does not require the groups to mana
 
 ## 9. Implementation Status
 
- Identity groups defined - Completed
- RBAC responsibilities defined - Completed
- Resource scope identified - Completed
- Exact RBAC roles selected - Completed
- Role-selection rationale documented - Completed
- RBAC assignments implemented - Completed
- Access tested - Completed
- Evidence captured - Completed 
-
-
- ## Access Testing Results
+ ### Access Testing Results
 
 | Identity Group | Test | Expected Result | Actual Result | Status |
 |---|---|---|---|---|
