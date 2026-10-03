@@ -31,7 +31,7 @@ The primary RBAC scope will therefore be the V2 resource group unless a narrower
 | Entra ID Group       | RBAC Role                            | Scope             | Purpose                                                        |
 | -------------------- | ------------------------------------ | ----------------- | -------------------------------------------------------------- |
 | Cloud-Developers     | Virtual Machine Contributor + Reader | V2 Resource Group | Manage the project VM and inspect related Azure resources      |
-| Security-Team        | Security Reader                      | V2 Resource Group | Review security configuration and security-related information |
+| Security-Team        | Security Reader + Reader             | V2 Resource Group | Review security configuration and security-related information |
 | Cloud-Administrators | Contributor                          | V2 Resource Group | Manage the V2 Azure infrastructure                             |
 
 
