@@ -149,6 +149,21 @@ These roles are excluded because the project does not require the groups to mana
  Resource scope identified - Completed
  Exact RBAC roles selected - Completed
  Role-selection rationale documented - Completed
- RBAC assignments implemented
- Access tested
- Evidence captured
+ RBAC assignments implemented - Completed
+ Access tested - Completed
+ Evidence captured - Completed 
+
+
+ ## Access Testing Results
+
+| Identity Group | Test | Expected Result | Actual Result | Status |
+|---|---|---|---|---|
+| Cloud-Developers | View resources | Allowed | Allowed | Passed |
+| Cloud-Developers | Start/stop VM | Allowed | Allowed | Passed |
+| Cloud-Developers | Modify RBAC role assignments | Denied | Denied | Passed |
+| Security-Team | View resources | Allowed | Allowed | Passed |
+| Security-Team | Start/stop VM | Denied | Denied | Passed |
+| Security-Team | Modify RBAC role assignments | Denied | Denied | Passed |
+| Cloud-Administrators | View resources | Allowed | Allowed | Passed |
+| Cloud-Administrators | Start/stop VM | Allowed | Allowed | Passed |
+| Cloud-Administrators | Modify RBAC role assignments | Denied | Denied | Passed |
