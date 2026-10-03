@@ -144,7 +144,21 @@ These roles are excluded because the project does not require the groups to mana
 
 ## 9. Implementation Status
 
- ### Access Testing Results
+| Component | Status | Details |
+|---|---|---|
+| Entra ID users | ✅ Complete | Created test identities for Developer, Security, Cloud Administrator, and Lab Administrator roles |
+| Entra ID groups | ✅ Complete | Created Cloud-Developers, Security-Team, and Cloud-Administrators security groups |
+| Group membership | ✅ Complete | Assigned each test identity to its corresponding security group |
+| Azure RBAC assignments | ✅ Complete | Assigned Reader, Security Reader, Virtual Machine Contributor, and Contributor roles at resource-group scope |
+| Least-privilege design | ✅ Complete | Privileged roles such as Owner and User Access Administrator were intentionally excluded |
+| Cloud-Developers access testing | ✅ Passed | Can view resources and manage the VM, but cannot modify RBAC assignments |
+| Security-Team access testing | ✅ Passed | Can view resources and security information, but cannot manage the VM or modify RBAC assignments |
+| Cloud-Administrators access testing | ✅ Passed | Can manage Azure resources, but cannot modify RBAC assignments |
+| Access control validation | ✅ Complete | Allowed and denied actions were tested against the intended permission model |
+| Evidence screenshots | ✅ Complete | Screenshots will be captured and added to the project evidence directory |
+
+
+ ## Access Testing Results
 
 | Identity Group | Test | Expected Result | Actual Result | Status |
 |---|---|---|---|---|
