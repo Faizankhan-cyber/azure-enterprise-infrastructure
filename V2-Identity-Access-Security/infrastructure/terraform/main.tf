@@ -27,6 +27,11 @@ resource "azurerm_subnet" "v2" {
   address_prefixes     = [var.subnet_address_prefix]
 }
 
+resource "azurerm_subnet_network_security_group_association" "v2" {
+  subnet_id                 = azurerm_subnet.v2.id
+  network_security_group_id = azurerm_network_security_group.v2.id
+}
+
 resource "azurerm_network_security_group" "v2" {
   name                = "nsg-v2-secure-web"
   location            = azurerm_resource_group.v2.location
