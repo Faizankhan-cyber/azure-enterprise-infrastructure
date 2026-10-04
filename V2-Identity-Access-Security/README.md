@@ -445,6 +445,3 @@ Future versions can introduce:
 
 ---
 
-
-
-**Don't replace the README yet if you haven't pushed the current version.** Since you said the repository is currently clean, first push that clean state. Then we'll update the README with this polished version, add the final screenshot, commit both together, and push the **actual final V2 release**.
