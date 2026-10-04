@@ -32,9 +32,9 @@ Implemented:
 
 ---
 
-## 🔐 Version 2 – Identity & Access Management *(SC-900)*
+## 🔐 Version 2 – Identity & Access Management *(Completed)*
 
-Planned:
+Implemented:
 
 - Microsoft Entra ID
 - Role-Based Access Control (RBAC)
@@ -215,7 +215,7 @@ docs/architecture/
 | Version | Status |
 |---------|--------|
 | Version 1 | ✅ Completed |
-| Version 2 | ⏳ Planned |
+| Version 2 | ✅ Completed |
 | Version 3 | ⏳ Planned |
 | Version 4 | ⏳ Planned |
 | Version 5 | ⏳ Planned |
