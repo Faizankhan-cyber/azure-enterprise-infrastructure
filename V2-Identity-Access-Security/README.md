@@ -1,6 +1,6 @@
-# V2 - Identity & Access Security
+# 🔐 V2 - Identity & Access Security
 
-## Overview
+## 📌 Overview
 
 V2 of the Azure Enterprise Infrastructure project focuses on securing Azure infrastructure through identity management, role-based access control, least-privilege access, Infrastructure as Code, and automated security validation.
 
@@ -10,7 +10,7 @@ The infrastructure was intentionally kept small to provide a realistic security 
 
 ---
 
-## Objectives
+## 🎯 Objectives
 
 The main objectives of V2 are:
 
@@ -25,7 +25,7 @@ The main objectives of V2 are:
 
 ---
 
-## Architecture
+## 🏗️ Architecture
 
 The V2 architecture consists of three main layers:
 
@@ -65,11 +65,11 @@ The network layer restricts administrative access to the Linux VM.
 
 ---
 
-## Identity & Access Model
+## 👤 Identity & Access Model
 
 Microsoft Entra ID is used to organize users into security groups.
 
-### Groups
+### 👥 Groups
 
 | Entra ID Group | Purpose |
 |---|---|
@@ -77,7 +77,7 @@ Microsoft Entra ID is used to organize users into security groups.
 | `Security-Team` | Monitor resources and security configuration without modifying infrastructure |
 | `Cloud-Administrators` | Manage the V2 Azure infrastructure |
 
-### RBAC Assignments
+### 🔑 RBAC Assignments
 
 | Group | Azure RBAC Role | Scope |
 |---|---|---|
@@ -91,7 +91,7 @@ Privileged roles such as `Owner`, `User Access Administrator`, and `Role Based A
 
 ---
 
-## Least Privilege
+## 🛡️ Least Privilege
 
 V2 follows the principle of least privilege.
 
@@ -107,7 +107,7 @@ This provides separation between infrastructure management, development, and sec
 
 ---
 
-## Azure Infrastructure
+## ☁️ Azure Infrastructure
 
 The V2 environment contains:
 
@@ -119,7 +119,7 @@ The V2 environment contains:
 - Network Interface
 - Ubuntu Linux Virtual Machine
 
-### Network Configuration
+### 🌐 Network Configuration
 
 The V2 virtual network uses:
 
@@ -144,7 +144,7 @@ HTTP port 80 remains defined in the NSG for the lab environment, although no web
 
 ---
 
-## SSH Security
+## 🔐 SSH Security
 
 The Linux VM uses SSH key authentication.
 
@@ -166,7 +166,7 @@ SSH connectivity was successfully tested from the authorized administrator netwo
 
 ---
 
-## Infrastructure as Code
+## 🧱 Infrastructure as Code
 
 Terraform is used to define and deploy the Azure infrastructure.
 
@@ -184,7 +184,7 @@ infrastructure/
     └── .terraform.lock.hcl
 ```
 
-### Terraform Workflow
+### 🔄 Terraform Workflow
 
 ```text
 Terraform Configuration
@@ -209,13 +209,13 @@ Terraform was used to create the Azure infrastructure instead of manually creati
 
 ---
 
-## Security Automation
+## 🔎 Security Automation
 
 Checkov was used to scan the Terraform configuration for security issues.
 
 The initial scan identified three findings.
 
-One finding was successfully remediated:
+### ✅ Remediated Finding
 
 ```text
 CKV2_AZURE_31
@@ -231,6 +231,8 @@ CKV2_AZURE_31
 PASSED
 ```
 
+### ⚠️ Remaining Findings
+
 Two findings remained and were reviewed as intentional/contextual findings:
 
 ```text
@@ -245,11 +247,13 @@ The public IP is currently used for direct administrative SSH access in this lab
 
 The Checkov results and reasoning are documented in:
 
-`docs/Security/checkov-results.md`
+```text
+docs/Security/checkov-results.md
+```
 
 ---
 
-## Validation & Testing
+## 🧪 Validation & Testing
 
 The V2 environment was tested across infrastructure, networking, identity, access control, and host security.
 
@@ -279,7 +283,7 @@ No changes
 
 This confirmed that the deployed infrastructure matched the Terraform configuration.
 
-### VM Validation
+### 🖥️ VM Validation
 
 The Azure VM was verified as:
 
@@ -288,7 +292,7 @@ PowerState: Running
 VMAgent: Ready
 ```
 
-### SSH Validation
+### 🔑 SSH Validation
 
 SSH connectivity was successfully established using:
 
@@ -296,17 +300,17 @@ SSH connectivity was successfully established using:
 ssh azureadmin@<public-ip>
 ```
 
-### RBAC Validation
+### 👥 RBAC Validation
 
 Role assignments were verified for:
 
-- Cloud-Developers
-- Security-Team
-- Cloud-Administrators
+- `Cloud-Developers`
+- `Security-Team`
+- `Cloud-Administrators`
 
 Access tests confirmed the expected permission boundaries.
 
-### Security Validation
+### 🛡️ Security Validation
 
 The following controls were validated:
 
@@ -320,7 +324,7 @@ The following controls were validated:
 
 ---
 
-## Evidence
+## 📸 Evidence
 
 Supporting evidence is stored in the project documentation.
 
@@ -342,10 +346,11 @@ The screenshots document:
 - Developer access
 - Administrator access
 - RBAC permission boundaries
+- Azure V2 resource deployment
 
 ---
 
-## Project Structure
+## 📂 Project Structure
 
 ```text
 V2-Identity-Access-Security/
@@ -381,9 +386,9 @@ V2-Identity-Access-Security/
 
 ---
 
-## V1 → V2 Evolution
+## 🔄 V1 → V2 Evolution
 
-### V1 - Secure Linux Web Server
+### 🖥️ V1 - Secure Linux Web Server
 
 V1 established the basic Azure infrastructure:
 
@@ -394,7 +399,7 @@ V1 established the basic Azure infrastructure:
 - SSH access
 - Nginx web server
 
-### V2 - Identity & Access Security
+### 🔐 V2 - Identity & Access Security
 
 V2 extends the infrastructure with:
 
@@ -410,7 +415,7 @@ The primary change from V1 to V2 is the introduction of identity-based access co
 
 ---
 
-## Limitations & Security Trade-offs
+## ⚠️ Limitations & Security Trade-offs
 
 This project is a controlled security lab rather than a production enterprise environment.
 
@@ -426,7 +431,7 @@ These limitations provide clear areas for improvement in future versions.
 
 ---
 
-## Future Improvements
+## 🚀 Future Improvements
 
 Future versions can introduce:
 
@@ -439,3 +444,7 @@ Future versions can introduce:
 - Enterprise-scale architecture patterns
 
 ---
+
+
+
+**Don't replace the README yet if you haven't pushed the current version.** Since you said the repository is currently clean, first push that clean state. Then we'll update the README with this polished version, add the final screenshot, commit both together, and push the **actual final V2 release**.
